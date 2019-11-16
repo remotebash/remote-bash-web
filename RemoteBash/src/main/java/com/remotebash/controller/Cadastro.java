@@ -4,6 +4,8 @@ import javax.validation.Valid;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -31,35 +33,18 @@ public class Cadastro {
 		return modelAndView;		
 	}
 	
-	@PostMapping("/")
+	@PostMapping("/cadastrar")
 	public ModelAndView postDados(@Valid User user) {
 		
 	    RestTemplate restTemplate = new RestTemplate();
-		String url = "localhost:8081/printar";
+		final String URL_REGISTER_USER = "http://3.94.151.158:8082/register/users";
 		
 		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
 		
-		headers.add("nome", user.getName());
-		headers.add("senha", user.getPassword());
-
-		final MultiValueMap<String, String> bodyMap = new LinkedMultiValueMap<>();
-		
-	    bodyMap.add("email", user.getEmail());
-	    bodyMap.add("endereco", user.getAddress());
-
-
-	    HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(bodyMap, headers);
-	    String result = restTemplate.postForObject(url, requestEntity, String.class);
-	    System.err.println(result);
-		
-		System.err.println(String.format("%s, %s, %s, %s, %s",
-				user.getName(),
-				user.getEmail(),
-				user.getPassword(),
-				user.getCellphone(),
-				user.getAddress()
-		));		
-		
+	    HttpEntity<User> requestEntity = new HttpEntity<>(user, headers);
+	    String response = restTemplate.postForObject(URL_REGISTER_USER, requestEntity, String.class);	    
+	    System.err.println(response);
 		
 		return acessoCadastro();
 		
