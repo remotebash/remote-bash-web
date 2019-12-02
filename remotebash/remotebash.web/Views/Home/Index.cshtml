@@ -1,0 +1,20 @@
+﻿@model remotebash.web.Models.ViewModel.UserLaboratory
+@{
+    ViewData["Title"] = "Laboratórios";
+    ViewData["UserConnect"] = $"@{Model.User.Name}";
+}
+    <div class="overflow-hidden" style="padding: 10px;">
+        <div class="row" style="margin-right: 0px; margin-left: 0px;">
+            @foreach (var lab in Model.Laboratories)
+            {
+                <div class="card mg10" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@lab.Name</h5>
+                        <p class="card-text">@lab.Description</p>
+                        <a class="btn btn-primary" href="~/Computers?lab=@lab.Id">Visualizar Computadores</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    

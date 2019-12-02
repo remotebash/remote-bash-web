@@ -1,0 +1,110 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(19, 25, 49);
+    padding: 10px;
+}
+
+.prompt{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background-color: rgb(31, 29, 29);
+}
+
+.container-title-prompt{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(228, 216, 216);
+    display: flex;
+}
+
+.title{
+    position: relative;
+    width: calc(100% - 30px);    
+    background-color: #e0e0e0;
+    padding: 5px;
+}
+
+.close{
+    position: relative;
+    width: 30px;
+    background-color: #e0e0e0;
+    color: rgb(31, 29, 29);
+    padding: 5px 12px;
+    transition: all 0.2s;
+    user-select: none;
+    cursor: pointer;
+}
+
+.close:hover{
+    background-color: rgb(126, 25, 25);
+    color: #e0e0e0;
+    transition: all 0.2s;
+}
+
+.container-cmd{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 30px);
+    overflow-y: scroll; 
+}
+
+
+.container-cmd::-webkit-scrollbar {
+    width: 5px;
+}
+  
+.container-cmd::-webkit-scrollbar-track {
+    background: rgb(31, 29, 29); 
+}
+
+.container-cmd::-webkit-scrollbar-thumb {
+    background: #fff; 
+}
+  
+.container-cmd::-webkit-scrollbar-thumb:hover {
+    background: #aaa; 
+  }
+
+
+.title-return-cmd,.return-cmd{
+    position: relative;
+    width: 100%;
+    color:rgb(50, 156, 50);
+}
+
+.return-cmd{
+    margin-bottom: 5px;
+}
+
+.container-input{
+    position: relative;
+    display: flex;
+}
+.user-cmd{
+    position: relative;
+    color:rgb(50, 156, 50);
+}
+input[class=execute-cmd]{
+    position: relative;
+    width: 100%;
+    color:rgb(50, 156, 50);
+    background-color: rgba(0,0,0,0);
+    padding: 0px 0px 0px 5px;
+    outline: none;
+    border: none;
+}

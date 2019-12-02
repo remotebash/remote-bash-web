@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "remotebash.web", "remotebash.web\remotebash.web.csproj", "{1F5AE6C8-9009-4002-932A-0F3DB9DE968E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F5AE6C8-9009-4002-932A-0F3DB9DE968E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5AE6C8-9009-4002-932A-0F3DB9DE968E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5AE6C8-9009-4002-932A-0F3DB9DE968E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5AE6C8-9009-4002-932A-0F3DB9DE968E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83519410-8A35-4E1F-9C2D-23FEEBDBC484}
+	EndGlobalSection
+EndGlobal

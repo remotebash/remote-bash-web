@@ -1,0 +1,32 @@
+﻿@model Laboratory
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <div class="overflow-hidden" style="padding: 10px;">
+        <div class="row" style="margin-right: 0px; margin-left: 0px;">
+
+            @if (Model.ComputerSet == null)
+            {
+            <p class="card-text text-light">Nenhum PC cadastrado para esse laboratório</p>
+            }
+            else
+            {
+                @foreach (var pc in Model.ComputerSet)
+                {
+                    <div class="card mg10" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">@pc.OperationalSystem - @pc.Macaddress</h5>
+                            <p class="card-text">Hd Total: @pc.HdTotal Hd Usado: @pc.HdUsage</p>
+                            <p class="card-text">Ip Local: @pc.Ip</p>
+                            <p class="card-text">Marca do Processador: @pc.ProcessorBrand</p>
+                            <p class="card-text">Modelo do Processador: @pc.ProcessorModel</p>
+                            <p class="card-text">RAM: @pc.RamMemory</p>
+                            <a class="btn btn-primary" href="~/Command?pc=@pc.Id&lab=@Model.Id">Executar Comando</a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+

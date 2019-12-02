@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - remotebash</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/style-command.css" />
+</head>
+<body class="bg-dark p-3 bg-dark" style="margin: 0px; padding: 0px!important">
+    <header>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark ">
+            <div class="dropdown dropdown-menu-right">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    downloads
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Download Client Windows</a>
+                    <a class="dropdown-item" href="#">Download App Android</a>
+                </div>
+            </div>
+            <div style="margin-left: 5px;">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">remotebash&#8288;@ViewData["UserConnect"]</a>
+            </div>
+        </nav>
+    </header>
+    <div class="bg-dark">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!--<footer class="footer text-muted bg-dark">
+        <div class="text-center text-white">
+            desenvolvido com ❤ por remotebash
+        </div>
+    </footer>-->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/event.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

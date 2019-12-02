@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Auth";
+}
+@{
+    ViewData["Title"] = "Auth";
+}
+@model ErrorModel
+<div></div>
+<div class="container-fluid">
+    <div class="container">
+        <img srcset/>
+        <h2 class="text-center text-white" id="title">remotebash</h2>
+        <p class="text-center">
+            <small id="passwordHelpInline" class="text-light">Não tem uma conta? Cadastre-se agora e obtenha os sistemas da remotebash gratuitamente ;]</small>
+        </p>
+        <hr class="bg-white">
+        <div class="row">
+            <div class="col-md-5">
+                <form asp-action="Register" method="post">
+                    <fieldset>
+                        <p class="text-uppercase pull-center text-light"> Cadastrar-se.</p>
+                        <div class="form-group">
+                            <input type="text" name="Name" id="username" class="form-control input-lg" placeholder="Nome">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" name="Email" id="email" class="form-control input-lg" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="Password" id="password" class="form-control input-lg" placeholder="Senha">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="Password2" id="password2" class="form-control input-lg" placeholder="Confirme sua senha">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="Cellphone" id="password2" class="form-control input-lg" placeholder="Celular">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="Address" id="password2" class="form-control input-lg" placeholder="Endereço">
+                        </div>
+                        <div>
+                            <input type="submit" class="btn btn-lg btn-primary" value="Cadastrar-se">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-5">
+                <form asp-action="Login" method="post">
+                    <fieldset>
+                        <p class="text-uppercase text-light"> Entrar usando sua conta: </p>
+
+                        <div class="form-group">
+                            <input type="email" name="Email" id="username" class="form-control input-lg" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="Password" id="password" class="form-control input-lg" placeholder="Senha">
+                        </div>
+                        <div>
+                            <input type="submit" class="btn btn-md text-light" style="background: #ff4c07" value="Entrar">
+                        </div>
+                        @if (!string.IsNullOrWhiteSpace(Model.Message))
+                        {
+                            <div class="alert alert-danger" role="alert" style="margin-top: 10px">
+                                @Model.Message
+                            </div>
+                        }
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
