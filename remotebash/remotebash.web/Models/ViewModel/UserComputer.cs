@@ -9,5 +9,7 @@ namespace remotebash.web.Models.ViewModel
     {
         public User User { get; set; }
         public Computer Computer { get; set; }
+        public Laboratory Laboratory { get; set; }
+        public string UrlRest { get; set; }
     }
 }

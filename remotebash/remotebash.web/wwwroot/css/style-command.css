@@ -19,9 +19,6 @@ html, body{
 
 .prompt{
     position: relative;
-    width: 800px;
-    height: 400px;
-    background-color: rgb(31, 29, 29);
 }
 
 .container-title-prompt{
@@ -59,32 +56,13 @@ html, body{
 .container-cmd{
     position: relative;
     width: 100%;
-    height: calc(100% - 30px);
-    overflow-y: scroll; 
+    height: calc(100% - 30px); 
 }
-
-
-.container-cmd::-webkit-scrollbar {
-    width: 5px;
-}
-  
-.container-cmd::-webkit-scrollbar-track {
-    background: rgb(31, 29, 29); 
-}
-
-.container-cmd::-webkit-scrollbar-thumb {
-    background: #fff; 
-}
-  
-.container-cmd::-webkit-scrollbar-thumb:hover {
-    background: #aaa; 
-  }
 
 
 .title-return-cmd,.return-cmd{
     position: relative;
     width: 100%;
-    color:rgb(50, 156, 50);
 }
 
 .return-cmd{
@@ -97,7 +75,6 @@ html, body{
 }
 .user-cmd{
     position: relative;
-    color:rgb(50, 156, 50);
 }
 input[class=execute-cmd]{
     position: relative;

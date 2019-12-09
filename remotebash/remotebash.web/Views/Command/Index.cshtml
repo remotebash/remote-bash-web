@@ -1,22 +1,21 @@
 ﻿@model remotebash.web.Models.ViewModel.UserComputer
 @{
-    ViewData["Title"] = "View";
+    ViewData["Title"] = "Command";
+    ViewData["UserConnect"] = $"/{Model.User.Name}/laboratories/computers/{Model.Computer.OperationalSystem} - {Model.Computer.Macaddress}";
 }
 
 <script>   
    var idUser = @Model.User.Id;
    var idPc = @Model.Computer.Id;    
+   var idLab = @Model.Laboratory.Id;
+   var urlRest = "@(Model.UrlRest)";
 </script>
 
     <div class="prompt" id="pc-001">
-        <div class="container-title-prompt">
-            <p class="title">remotebash: connected in pc-@Model.Computer.Macaddress</p>
-            <div id="close-prompt" class="close">x</div>
-        </div>
         <div class="container-cmd">
-            <div id="container-return"></div>
+            <div id="container-return" class="text-white"></div>
             <div class="container-input">
-                <div class="user-cmd">remotebash></div>
+                <div class="user-cmd text-white">remotebash></div>
                 <input type="text" class="execute-cmd" id="input-cmd" autofocus />
             </div>
         </div>

@@ -30,8 +30,8 @@ namespace remotebash.web.Controllers
             long idPc = 0;
             try
             {
-                idPc = int.Parse(HttpContext.Request.Query["pc"]);
                 idLab = int.Parse(HttpContext.Request.Query["lab"]);
+                idPc = int.Parse(HttpContext.Request.Query["pc"]);
             }
             catch { }
 
@@ -47,12 +47,21 @@ namespace remotebash.web.Controllers
             var lab = clientLab.Get(user.Id, idLab);
             var pc = clientPc.GetById(idPc);
 
-            if (pc == null) return RedirectToAction("Index", "Computers");
-            if (!lab.ComputerSet.Any(obj => obj.Id == pc.Id)) if (pc == null) return RedirectToAction("Index", "Computers");
-
+            if(idLab > 0 && idPc > 0)
+            {
+                if (pc == null) return RedirectToAction("Index", "Computers");
+                if (!lab.ComputerSet.Any(obj => obj.Id == pc.Id)) if (pc == null) return RedirectToAction("Index", "Computers");
+            }
+            else
+            {
+                if (!(lab.User.Id == user.Id)) return RedirectToAction("Index", "Computers");
+            }
+            
             UserComputer userComputer = new UserComputer();
             userComputer.User = user;
-            userComputer.Computer = pc;
+            userComputer.Computer = pc ?? new Computer();
+            userComputer.Laboratory = lab;
+            userComputer.UrlRest = idLab > 0 && idPc == 0 ? "http://3.94.151.158:8082/register/command/laboratory" : "http://3.94.151.158:8082/register/command";
 
             return View(userComputer);
         }

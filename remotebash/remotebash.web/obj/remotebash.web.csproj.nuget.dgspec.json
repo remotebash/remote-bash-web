@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\VS19\\remotebash\\remotebash\\remotebash.web\\remotebash.web.csproj": {}
+    "C:\\dev\\pqp\\pqp3\\remote-bash-web\\remotebash\\remotebash.web\\remotebash.web.csproj": {}
   },
   "projects": {
-    "C:\\dev\\VS19\\remotebash\\remotebash\\remotebash.web\\remotebash.web.csproj": {
+    "C:\\dev\\pqp\\pqp3\\remote-bash-web\\remotebash\\remotebash.web\\remotebash.web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\VS19\\remotebash\\remotebash\\remotebash.web\\remotebash.web.csproj",
+        "projectUniqueName": "C:\\dev\\pqp\\pqp3\\remote-bash-web\\remotebash\\remotebash.web\\remotebash.web.csproj",
         "projectName": "remotebash.web",
-        "projectPath": "C:\\dev\\VS19\\remotebash\\remotebash\\remotebash.web\\remotebash.web.csproj",
+        "projectPath": "C:\\dev\\pqp\\pqp3\\remote-bash-web\\remotebash\\remotebash.web\\remotebash.web.csproj",
         "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\VS19\\remotebash\\remotebash\\remotebash.web\\obj\\",
+        "outputPath": "C:\\dev\\pqp\\pqp3\\remote-bash-web\\remotebash\\remotebash.web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -78,12 +78,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x86",
-              "version": "[3.0.0, 3.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

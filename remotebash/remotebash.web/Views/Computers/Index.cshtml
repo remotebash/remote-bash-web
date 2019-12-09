@@ -1,6 +1,7 @@
 ﻿@model Laboratory
 @{
     ViewData["Title"] = "Index";
+    ViewData["UserConnect"] = $"/{Model.User.Name}/laboratories/computers/";
 }
 
     <div class="overflow-hidden" style="padding: 10px;">
@@ -22,7 +23,7 @@
                             <p class="card-text">Marca do Processador: @pc.ProcessorBrand</p>
                             <p class="card-text">Modelo do Processador: @pc.ProcessorModel</p>
                             <p class="card-text">RAM: @pc.RamMemory</p>
-                            <a class="btn btn-primary" href="~/Command?pc=@pc.Id&lab=@Model.Id">Executar Comando</a>
+                            <a class="btn btn-warning" href="~/Command?pc=@pc.Id&lab=@Model.Id">Comando</a>
                         </div>
                     </div>
                 }

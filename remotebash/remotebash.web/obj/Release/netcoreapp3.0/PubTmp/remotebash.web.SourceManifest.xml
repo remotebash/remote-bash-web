@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="C:\dev\VS19\remotebash\remotebash\remotebash.web\obj\Release\netcoreapp3.0\PubTmp\Out\" />
+  <IisApp path="C:\dev\pqp\pqp3\remote-bash-web\remotebash\remotebash.web\obj\Release\netcoreapp3.0\PubTmp\Out\" />
 </sitemanifest>
